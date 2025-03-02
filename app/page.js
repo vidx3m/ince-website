@@ -3,14 +3,14 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
       {/* Navbar */}
       <nav className="fixed w-full top-0 flex justify-between items-center p-4">
-        <h1 className="text-3xl font-ovo text-orange-500 text-center flex-1">Ince</h1>
+        <h1 className="text-3xl font-ovo text-orange-500 text-center flex-1">INCE</h1>
         <button className="text-white text-2xl">☰</button>
       </nav>
 
       {/* Hero Section */}
       <header className="flex-1 flex flex-col items-center justify-center text-center p-8 mt-20">
         <h2 className="text-5xl font-extrabold">
-          <span className="text-orange-500">In</span>surance simplif<span className="text-orange-500">ce</span>d
+          <span className="text-orange-500">In</span>surance simplified<span className="text-orange-500">Ince</span>d
         </h2>
         
         {/* Selection Buttons & Input */}
@@ -27,7 +27,7 @@ export default function Home() {
 
       {/* How It Works Section */}
       <section className="py-8 px-6 text-center text-sm">
-        <h3 className="text-2xl font-bold text-orange-500">How It Works</h3>
+        <h3 className="text-2xl font-bold text-orange-500">Insurance simplified, Ince</h3>
         <p className="mt-2 text-gray-400">Ince analyzes complex insurance pricing to optimize your coverage and save you money.</p>
       </section>
 
@@ -38,3 +38,4 @@ export default function Home() {
     </div>
   );
 }
+
