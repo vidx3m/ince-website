@@ -1,45 +1,37 @@
-import { useState } from 'react';
-import Link from 'next/link';
-
 export default function Home() {
-  const [postalCode, setPostalCode] = useState('');
-
-  const handleInputChange = (e) => {
-    setPostalCode(e.target.value);
-  };
-
-  const handleStartClick = () => {
-    // Redirect to the quote page with the postal code
-    if (postalCode) {
-      window.location.href = `/get-a-quote?postalCode=${postalCode}`;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
-      <h1 className="text-4xl font-bold font-ovo text-center">
-        Insurance simplified, <span className="text-orange-500">Ince</span>
-      </h1>
-      <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center">
-        <button className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-xl">Home</button>
-        <button className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-xl">Auto</button>
-        <input
-          type="text"
-          placeholder="Enter Postal Code"
-          value={postalCode}
-          onChange={handleInputChange}
-          className="px-4 py-3 text-black rounded-xl w-64"
-        />
-        <button
-          onClick={handleStartClick}
-          className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl"
-        >
-          Start
-        </button>
-      </div>
-      <div className="mt-10 text-center text-sm max-w-xl">
-        <p className="text-gray-400">Our AI-driven platform finds the best insurance coverage at the best price, identifying inefficiencies and optimizing your savings.</p>
-      </div>
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
+      {/* Navbar */}
+      <nav className="fixed w-full top-0 flex justify-between items-center p-4">
+        <h1 className="text-3xl font-ovo text-orange-500 text-center flex-1">Ince</h1>
+        <button className="text-white text-2xl">☰</button>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="flex-1 flex flex-col items-center justify-center text-center p-8 mt-20">
+        <h2 className="text-5xl font-extrabold">
+          <span className="text-orange-500">In</span>surance simplified, <span className="text-orange-500">ce</span>
+        </h2>
+        
+        {/* Selection Buttons & Input */}
+        <div className="flex mt-6 space-x-4">
+          <button className="bg-gray-700 px-6 py-3 text-lg rounded-lg shadow-md hover:bg-gray-600 transition">Home</button>
+          <button className="bg-gray-700 px-6 py-3 text-lg rounded-lg shadow-md hover:bg-gray-600 transition">Auto</button>
+          <input type="text" placeholder="Enter Postal Code" className="px-4 py-3 rounded-lg border text-gray-900" />
+          <button className="bg-orange-500 text-white px-6 py-3 text-lg font-semibold rounded-lg shadow-md hover:bg-orange-600 transition">Start</button>
+        </div>
+      </header>
+
+      {/* How It Works Section */}
+      <section className="py-8 px-6 text-center text-sm">
+        <h3 className="text-2xl font-bold text-orange-500">How It Works</h3>
+        <p className="mt-2 text-gray-400">Ince analyzes complex insurance pricing to optimize your coverage and save you money.</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center py-4 mt-12">
+        <p>© 2024 Ince - Smarter Home & Auto Insurance</p>
+      </footer>
     </div>
   );
 }
